@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+    <title>GoogleTrends</title>
+</head>
+<style>
+    .hero-body{
+        background-color: rgb(9, 67, 162);
+}
+</style>
+<body>
+<section class="hero is-primary">
+
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        GoogleTrends
+      </h1>
+      <h2 class="subtitle">
+       Look at google trends
+      </h2>
+    </div>
+  </div>
+
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+        <form method="POST" action="/">
+<div class="field is-grouped">
+  <p class="control is-expanded">
+    <input class="input" name="Topic1" type="text" placeholder="Topic">
+    <input class="input" name="Topic2" type="text" placeholder="Topic">
+  </p>
+  <p class="control">
+    <button class="button is-info">
+      Search
+    </button>
+  </p>
+</div>
+    </form>
+    </div>
+  </section>
+
+
+
+
+    <section class="section">
+    <div class="container">
+     <div class="tile is-ancestor">
+  <div class="tile is-vertical">
+      <div class="tile">
+      {% if Graph %}
+      <img src="{{url_for('static', filename='Graph.png')}}">
+      {% endif %}
+      </div>
+  </div>
+</div>
+    </div>
+  </section>
+
+</body>
+</html>
